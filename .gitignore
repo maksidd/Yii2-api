@@ -33,22 +33,24 @@ Thumbs.db
 # Ignore IDE-specific files
 .vscode/
 
-# Ignore Yii2 runtime files
-/runtime/
+/runtime/*
+!/runtime/cache/
 !/runtime/cache/.gitkeep
+!/runtime/debug/
 !/runtime/debug/.gitkeep
+!/runtime/logs/
 !/runtime/logs/.gitkeep
 
-# Ignore Yii2 assets files
-/web/assets/
+# Ignore everything in web/assets, but allow .gitkeep
+/web/assets/*
 !/web/assets/.gitkeep
 
-# Ignore Yii2 uploads files
-/web/uploads/
+# Ignore everything in web/uploads, but allow .gitkeep
+/web/uploads/*
 !/web/uploads/.gitkeep
 
-# Ignore Yii2 protected files
-/web/protected/
+# Ignore everything in web/protected, but allow .gitkeep
+/web/protected/*
 !/web/protected/.gitkeep
 
 # Ignore test output files
