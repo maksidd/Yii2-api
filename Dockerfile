@@ -24,7 +24,7 @@ WORKDIR /var/www/html
 # Устанавливаем зависимости
 RUN git config --global --add safe.directory /var/www/html
 RUN composer install --no-interaction --ignore-platform-reqs
-
+RUN chmod -R 777 /web/assets
 # Порт
 EXPOSE 8000
 

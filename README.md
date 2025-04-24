@@ -6,13 +6,12 @@ This is a basic Yii2 application with a REST API endpoint to calculate the sum o
 
 * PHP 8.3+
 * Composer
+* Docker
 
 ## Installation
 
-1. Clone the repository
-2. Run `composer install`
-3. Make the `yii` file executable: `chmod +x ./yii`
-4. Start the development server: `php -S 0.0.0.0:5000 -t web`
+1. Build the Docker image using the Dockerfile in the project's root directory. Run `sudo make up`
+2. Access the application Open your browser and navigate to: http://localhost:8000
 
 ## Project Structure
 
