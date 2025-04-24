@@ -97,7 +97,7 @@ php test-api.php 2,4,6,8,10
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"numbers": [1, 2, 3, 4, 5, 6]}' \
-  http://localhost:5000/api/sum-even
+  http://localhost:8000/api/sum-even
 ```
 
 ### Using PHP
