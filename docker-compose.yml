@@ -11,4 +11,6 @@ services:
       - .:/var/www/html:cached
       # Исключаем vendor, чтобы не перезаписался
       - /var/www/html/vendor
+      - /var/www/html/web/assets
+
     container_name: yii2-api4
