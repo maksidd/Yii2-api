@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  yii2-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html:cached
+      # Исключаем vendor, чтобы не перезаписался
+      - /var/www/html/vendor
+    container_name: yii2-api4

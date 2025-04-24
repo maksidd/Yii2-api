@@ -1,0 +1,54 @@
+# Ignore vendor directories
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Ignore PHPStorm and IntelliJ IDEA files
+/.idea/
+/.phpstorm/
+
+# Ignore PHPUnit cache
+/phpunit.cache/
+
+# Ignore PHP Code Coverage cache
+/.php-code-coverage/
+
+# Ignore Composer lock file
+/composer.lock
+
+# Ignore yarn and npm lock files
+/yarn.lock
+/package-lock.json
+
+# Ignore various log files
+*.log
+*.tmp
+*.pid
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+# Ignore Yii2 runtime files
+/runtime/
+
+# Ignore Yii2 assets files
+/web/assets/
+
+# Ignore Yii2 uploads files
+/web/uploads/
+
+# Ignore Yii2 protected files
+/web/protected/
+
+# Ignore test output files
+/tests/_output/
+
+
+
+
+
+
