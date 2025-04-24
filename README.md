@@ -79,18 +79,6 @@ This is a basic Yii2 application with a REST API endpoint to calculate the sum o
 
 ## Usage Examples
 
-### Using the test script
-
-A convenient test script is included to test the API:
-
-```bash
-# Test with default values [1,2,3,4,5,6]
-php test-api.php
-
-# Test with custom values
-php test-api.php 2,4,6,8,10
-```
-
 ### Using curl
 
 ```bash
@@ -100,49 +88,13 @@ curl -X POST \
   http://localhost:8000/api/sum-even
 ```
 
-### Using PHP
-
-```php
-$data = json_encode(['numbers' => [1, 2, 3, 4, 5, 6]]);
-
-$ch = curl_init('http://localhost:5000/api/sum-even');
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Content-Type: application/json',
-    'Content-Length: ' . strlen($data)
-]);
-
-$result = curl_exec($ch);
-curl_close($ch);
-
-$response = json_decode($result, true);
-echo "Sum of even numbers: " . $response['sum'];
-```
-
-### Using JavaScript
-
-```javascript
-fetch('http://localhost:5000/api/sum-even', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    numbers: [1, 2, 3, 4, 5, 6]
-  })
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Sum of even numbers:', data.sum);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
-```
-
 ## Running Tests
+
+Inside the Docker container:
+
+```bash
+sudo docker exec -it yii2-api4 bash
+```
 
 Run all PHPUnit tests:
 
